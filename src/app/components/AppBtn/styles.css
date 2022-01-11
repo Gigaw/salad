@@ -1,0 +1,14 @@
+.app-button {
+  font-size: 30px;
+  font-weight: 600;
+  padding: 10px 40px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer; 
+  color: white;
+}
+
+.app-button:hover {
+  background-color: burlywood;
+  box-shadow: 0px 0px 8px 4px rgba(34, 60, 80, 0.2);
+}

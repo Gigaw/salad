@@ -1,0 +1,16 @@
+.header {
+  margin-bottom: 20px;
+}
+
+.header__title {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.header__description {
+  font-size: 18px;
+  line-height: 22px;
+  width: 50%;
+}
+
+

@@ -1,0 +1,10 @@
+.home__next-ways {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.home__next-ways-bttn {
+  margin: 20px 20px;
+}

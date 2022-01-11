@@ -3,6 +3,7 @@ import { CONFIG } from "../../../config";
 const {SERVER_URL} = CONFIG;
 
 export const fetchSalads = async () => {
+  console.log('fetchSalads')
   try {
     const response = await fetch(SERVER_URL + "/salads", { method: "GET" });
     const json = await response.json();

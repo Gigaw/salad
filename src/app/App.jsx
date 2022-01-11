@@ -1,13 +1,22 @@
 import "./App.css";
-import Molecules from "./components/Molecules";
-// import Salads from "./components/Salads";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Molecules from "./screens/Molecules";
+import Salads from "./screens/Salads";
+import Home from "./screens/Home";
+import Basket from "./screens/Basket";
 
 function App() {
   return (
-    <div className="App">
-      <Molecules/>
-      {/* <Salads /> */}
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index path="/" element={<Home />} />
+        <Route path="/salads" element={<Salads />} />
+        <Route path="/molecules" element={<Molecules />} />
+        <Route path="/basket" element={<Basket />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
