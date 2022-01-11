@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import AppBtn from "../../components/AppBtn";
 import Layout from "../../components/Layout";
 import ScreenDefHeader from "../../components/ScreenDefHeader";
 import { fetchSalads, setSelectedSalad } from "../../store/actions/salads";
@@ -21,7 +23,7 @@ function Salads() {
   }, []);
 
   return (
-    <Layout>
+    // <Layout>
       <div className="salads">
         <ScreenDefHeader
           title={config.title}
@@ -37,8 +39,14 @@ function Salads() {
             />
           ))}
         </ul>
+        {selectedSalad && (
+          <div>
+            <AppBtn text={"Make order"} /> <span>or</span>{" "}
+            <Link className="link" to="/molecules"> make your own salad</Link>{" "}
+          </div>
+        )}
       </div>
-    </Layout>
+    // </Layout>
   );
 }
 

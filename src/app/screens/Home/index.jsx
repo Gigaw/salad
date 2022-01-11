@@ -18,7 +18,7 @@ function Home() {
   const navigate = useNavigate();
 
   return (
-    <Layout>
+    // <Layout>
       <div className="home">
         <ScreenDefHeader
           title={config.title}
@@ -37,7 +37,7 @@ function Home() {
           />
         </div>
       </div>
-    </Layout>
+    // </Layout>
   );
 }
 

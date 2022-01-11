@@ -1,0 +1,31 @@
+.navigation {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+  justify-content: center;
+  background-color: cornflowerblue;
+}
+
+.navigation-item__link {
+  font-size: 20px;
+  font-weight: 600;
+  color: aliceblue;
+  cursor: pointer;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+
+.navigation-item--active .navigation-item__link {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.navigation-item__link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navigation__item {
+  margin-bottom: 20px;
+}

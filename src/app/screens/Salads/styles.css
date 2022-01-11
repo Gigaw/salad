@@ -1,6 +1,14 @@
+.salads {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* background-color: wheat; */
+}
+
 .salads__list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .salads__item {

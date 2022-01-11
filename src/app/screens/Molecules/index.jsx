@@ -28,7 +28,7 @@ function Molecules() {
   }, []);
 
   return (
-    <Layout>
+    // <Layout>
       <div className="molecules">
         <ScreenDefHeader
           title={config.title}
@@ -53,7 +53,7 @@ function Molecules() {
           ))}
         </ul>
       </div>
-    </Layout>
+    // </Layout>
   );
 }
 
