@@ -1,0 +1,22 @@
+.price__current {
+  /* display: block; */
+  font-size: 18px;
+}
+
+.price__text {
+  margin-right: auto;
+}
+
+.price__prev {
+  text-decoration: line-through;
+  font-size: 12px;
+  margin-right: 20px;
+}
+
+.price {
+  margin-top: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}

@@ -11,7 +11,7 @@ export const fetchMolecules = () => {
       const json = await response.json();
 
       if (response.status === 200) {
-        dispatch({ type: "FETCH_MOLECULES", payload:  json.result});
+        dispatch({ type: "FETCH_MOLECULES", payload: json.result });
         // return json.result;
       } else {
         // return null;
@@ -23,7 +23,7 @@ export const fetchMolecules = () => {
   };
 };
 
-export const setSelectedMolecules = (props) => {
+export const incrementSelectedMolecules = (props) => {
   const { selectedMolecules, id, maxCount } = props;
   return (dispatch) => {
     if (selectedMolecules[id]) {
@@ -38,6 +38,19 @@ export const setSelectedMolecules = (props) => {
         newObj[id] = 1;
         dispatch({ type: "SET_SELECTED_MOLECULES", payload: newObj });
       }
+    }
+  };
+};
+
+export const decrementSelectedMolecules = (props) => {
+  const { selectedMolecules, id } = props;
+  console.log('dec')
+
+  return (dispatch)=> {
+    if (selectedMolecules[id]) {
+      const newObj = { ...selectedMolecules };
+      newObj[id]--;
+      dispatch({ type: "SET_SELECTED_MOLECULES", payload: newObj });
     }
   };
 };

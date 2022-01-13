@@ -1,20 +1,24 @@
 import { CONFIG } from "../../../config";
+import Price from "../../components/Price";
 const { SERVER_URL } = CONFIG;
 
-function Item({ data, onClick, addedCount = 0 }) {
+function Item({ data, onIncClick, onDecClick, addedCount = 0 }) {
   const { title, image, price, discount_price, qty } = data;
   return (
-    <li className="molecules__item molecules-item" onClick={onClick}>
+    <li className="molecules__item molecules-item">
       <h3 className="molecules-item__title">{title}</h3>
       <div className="molecules-item__image">
         <img className="molecules-item__image-pic" src={SERVER_URL + image} />
       </div>
-      <div className="molecules-item__info-wrapper">
-        <span className="molecules-item__info-row">old price: {price}</span>
-        <span className="molecules-item__info-row">
-          new price: {discount_price}
-        </span>
-        <span className="molecules-item__info-row">
+      <Price price={price} discount_price={discount_price} />
+      <div className="adding">
+        <button className="adding__button" onClick={onIncClick}>
+          +
+        </button>
+        <button className="adding__button" onClick={onDecClick}>
+          -
+        </button>
+        <span className="adding__count">
           {addedCount || 0}/{qty}
         </span>
       </div>
